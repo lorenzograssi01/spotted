@@ -1,0 +1,45 @@
+input, textarea
+{
+    display: block;
+    margin: auto;
+    border-radius: 0.375rem;
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 1.0625rem;
+}
+label
+{
+    display: block;
+    margin: auto;
+    margin-top: 1.25rem;
+    margin-bottom: 0.3125rem;
+    width: 100%;
+    font-size: 1.0625rem;
+}
+textarea
+{
+    min-height: 4.5rem;
+    height: 4.5rem;
+}
+
+.send
+{
+    display: block;
+    margin-left: auto;
+}
+
+.section_title
+{
+    font-size: 1.25rem;
+}
+
+select
+{
+    margin: 0;
+    width: 100%;
+    font-size: 1.0625rem;
+    border-radius: 0.375rem;
+    display: block;
+    padding: 0.3125rem;
+    height: auto;
+}

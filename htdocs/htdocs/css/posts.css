@@ -1,0 +1,61 @@
+.select_comm
+{
+    margin-left: 0.125rem;
+}
+
+select
+{
+    width: 13rem;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#change_community
+{
+    margin-right: 0.25rem;
+    cursor: pointer;
+}
+
+.newpostarea
+{
+    margin-top: 0.625rem;
+}
+
+#send_wrap
+{
+    white-space: nowrap;
+    max-width: 70%;
+    overflow: hidden;
+}
+
+#send_post
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 18rem;
+}
+
+@media screen and (max-width: 450px)
+{
+    select
+    {
+        width: 12rem;
+    }
+    #send_post
+    {
+        max-width: 15rem;
+    }
+}
+
+@media screen and (max-width: 375px)
+{
+    select
+    {
+        width: 11rem;
+    }
+    #send_post
+    {
+        max-width: 13rem;
+    }
+}

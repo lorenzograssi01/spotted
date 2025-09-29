@@ -1,0 +1,70 @@
+.loadmore
+{
+    display: flex;
+    margin: auto;
+    margin-bottom: 0.625rem;
+}
+.chat_bar
+{
+    padding: 0.3125rem;
+    display: flex;
+}
+.chat
+{
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    padding: 0;
+    background-color: white;
+    transition-duration: 100ms;
+    cursor: pointer;
+}
+.title.arrow
+{
+    margin-right: 0;
+    margin-left: 1rem;
+}
+.title.applicant
+{
+    margin-left: 0;
+}
+.postcontent
+{
+    padding-top: 0rem;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+}
+.dotdotdot_wrap
+{
+    margin-left: auto;
+}
+.lastmessage
+{
+    display: flex;
+    padding: 0.3125rem;
+    background-color: lightgray;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.unread.lastmessage
+{
+    background-color: lightgoldenrodyellow;
+}
+.lastmessage > p
+{
+    margin: 0;
+}
+.lastmessage > p.msg_text
+{
+    margin-left: 0.3125rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-width: 1%;
+}
+.message_username
+{
+    font-weight: bold;
+}

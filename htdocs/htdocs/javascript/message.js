@@ -30,7 +30,7 @@ function sendmessage()
     {
         if(request.readyState == 4 && (request.status != 200 || Number(request.responseText)))
         {
-            display_msg("There's been an error trying to send your message");
+            display_msg("There was an error trying to send your message");
             obj.classList.remove("loading");
             obj.onclick = sendmessage;
             isload = false;
@@ -62,7 +62,7 @@ function loadmoremessages()
     {
         if(request.readyState == 4 && (request.status != 200 || Number(request.responseText)))
         {
-            display_msg("There's been an error trying to load more messages");
+            display_msg("There was an error trying to load more messages");
             obj.classList.remove("loading");
             obj.onclick = loadmoremessages;
         }

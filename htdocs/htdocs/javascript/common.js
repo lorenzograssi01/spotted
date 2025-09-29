@@ -79,7 +79,7 @@ function accept_applicant()
     {
         if(request.readyState == 4 && (request.status != 200 || Number(request.responseText) < 0))
         {
-            display_msg("There's been an error trying to accept the application, something might have been deleted, if the problem persists try refreshing the page");
+            display_msg("There was an error trying to accept the application, something might have been deleted, if the problem persists try refreshing the page");
             obj.onclick = accept_applicant;
             obj.classList.remove("loading");
         }
@@ -120,7 +120,7 @@ function cancel_applicant()
     {
         if(request.readyState == 4 && (request.status != 200 || Number(request.responseText) < 0))
         {
-            display_msg("There's been an error trying to cancel the application, something might have been deleted, if the problem persists try refreshing the page");
+            display_msg("There was an error trying to cancel the application, something might have been deleted, if the problem persists try refreshing the page");
             obj.onclick = cancel_applicant;
             obj.classList.remove("loading");
         }
@@ -176,7 +176,7 @@ function showcomments()
     {
         if(request.readyState == 4 && request.status != 200)
         {
-            display_msg("Theres's been an error, try again");
+            display_msg("An error has occurred, try again");
             obj.onclick = showcomments;
             obj.classList.remove("loadingcomments");
             obj.classList.add("showcomments");
@@ -231,7 +231,7 @@ function loadmorecomments()
     {
         if(request.readyState == 4 && request.status != 200)
         {
-            display_msg("Theres's been an error, try again");
+            display_msg("An error has occurred, try again");
             obj.onclick = loadmorecomments;
             obj.classList.remove("loading_comm_loadmore");
             obj.classList.add("comm_loadmore");
@@ -324,7 +324,7 @@ function like_unlike()
     {   
         if(request.readyState == 4 && (request.status != 200 || Number(request.responseText) < 0))
         {
-            display_msg("There's been an error trying to like the post, the post might have been deleted, if the problem persists try refreshing the page");
+            display_msg("There was an error trying to like the post, the post might have been deleted, if the problem persists try refreshing the page");
             obj.classList.remove("loadinglike");
             obj.onclick = like_unlike;
             if(text == "liked")
@@ -363,7 +363,7 @@ function apply_unapply(postid, type, obj, accepted = false)
     }
     if(type == "unapplied" && (document.getElementById("postbar_" + postid) == null))
     {
-        display_msg("To apply for this post, you need to be subscribed to the community");
+        display_msg("To apply to this post, you need to be subscribed to the community");
         obj.onclick = apply_event;
         return;
     }
@@ -383,7 +383,7 @@ function apply_unapply(postid, type, obj, accepted = false)
                 document.getElementById("post_" + postid).classList.add("post_close");
             }
             else
-                display_msg("There's been an error trying to apply, the post might have been deleted, if the problem persists try refreshing the page");
+                display_msg("There was an error trying to apply, the post might have been deleted, if the problem persists try refreshing the page");
             obj.classList.remove("loadingapply");
             obj.onclick = apply_event;
             if(type == "applied")
@@ -449,7 +449,7 @@ function loadmoreapplicants()
     {   
         if(request.readyState == 4 && request.status != 200)
         {
-            display_msg("There's been an error trying to load applicants, the post might have been deleted, if the problem persists try refreshing the page");
+            display_msg("There was an error trying to load applicants, the post might have been deleted, if the problem persists try refreshing the page");
             obj.classList.remove("loading_comm_loadmore");
             obj.classList.add("comm_loadmore");
             obj.onclick = loadmoreapplicants;
@@ -487,7 +487,7 @@ function show_applicants(postid, obj)
     {   
         if(request.readyState == 4 && request.status != 200)
         {
-            display_msg("There's been an error trying to load applicants, the post might have been deleted, if the problem persists try refreshing the page");
+            display_msg("There was an error trying to load applicants, the post might have been deleted, if the problem persists try refreshing the page");
             obj.classList.remove("loadingapply");
             obj.classList.add("show_applicants");
             obj.onclick = apply_event;
@@ -694,16 +694,16 @@ function report(id, type)
     {
         if(request.readyState == 4 && (request.status != 200 || request.responseText == "-3"))
         {
-            display_msg("There's been an error reporting the " + type + ", if the error persists try refreshing the page, the post may have already been deleted");
+            display_msg("There was an error reporting the " + type + ", the " + type + " may have already been deleted, if the error persists try refreshing the page");
         }
         else if(request.readyState == 4 && request.status == 200)
         {
             if(request.responseText == "0")
                 display_msg("The " + type + " has been successfully reported", "Success");
             else if(request.responseText == "-1")
-                display_msg("The post is already under review, please wait");
+                display_msg("The " + type + " is already under review, please wait");
             else
-                display_msg("The post has already been reviewed");
+                display_msg("The " + type + " has already been reviewed");
         }
     });
 }
@@ -731,7 +731,7 @@ function open_close_post(postid, newval, dotdotdot_id)
     {
         if(request.readyState == 4 && (request.status != 200 || Number(request.responseText) < 0))
         {
-            display_msg("There's been an error, try again");
+            display_msg("There was an error, try again");
             is_closing = false;
         }
         else if(request.readyState == 4 && request.status == 200)
@@ -817,7 +817,7 @@ function post_options_menu()
     else if(applystring == "hideapp")
         applystring = "Hide applicants";
     else if(applystring == "applied")
-        applystring = "Unapply";
+        applystring = "Cancel application";
     else if(applystring == "unapplied")
         applystring = "Apply";
     else if(applystring == "acceptedapp")

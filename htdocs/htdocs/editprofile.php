@@ -27,7 +27,7 @@
               elseif($result == -1)
                 $msg = "<script type = 'module'>error('Contact usernames can only contain letters, numbers and these characters: . - _')</script>";
               else   
-                $msg = "<script type = 'module'>error('An error has occurred')</script>";
+                $msg = "<script type = 'module'>error('An error has occurred, try again')</script>";
           }
       }
       head();

@@ -28,7 +28,7 @@ function loadmore()
     {
         if(request.readyState == 4 && request.status != 200)
         {
-            display_msg("There's been an error trying to load more chats");
+            display_msg("There was an error trying to load more chats");
             obj.classList.remove("loading");
             obj.onclick = loadmore;
         }
@@ -161,7 +161,7 @@ function load()
         document.getElementById("potential_chats").classList.add("hidden");
 
     if(nopen == 0 && npotential == 0)
-        options_menu("No chats", [{value: "You have no chats! Try appliyig to some posts!"}], [{value: "Go home", onclick: () => {window.location.href = "./posts.php"}}]);
+        options_menu("No chats", [{value: "You have no chats! Try appliying to some posts!"}], [{value: "Go home", onclick: () => {window.location.href = "./posts.php"}}]);
     
     let chats = document.getElementsByClassName("chat");
     for(let i = 0; i < chats.length; i++)

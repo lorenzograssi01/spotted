@@ -49,6 +49,6 @@
     else if($res == 1 || $res == -1)
       echo "<script type = 'module'>error('Wrong username or password')</script>";
     else
-      echo "<script type = 'module'>error('An error has occurred')</script>";
+      echo "<script type = 'module'>error('An error has occurred, try again')</script>";
   ?>
 </html>
